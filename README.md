@@ -18,11 +18,11 @@ python3.8 -m pip install --ignore-installed --prefix $EB_TMPDIR easybuild
 
 # Update environment to use this temporary EasyBuild installation
 export PATH=$EB_TMPDIR/bin:$PATH
-export PYTHONPATH=$EB_TMPDIR/lib/python3.8/site-packages/:$PYTHONPATH
-export EB_PYTHON=python3.8
+export PYTHONPATH=$EB_TMPDIR/lib/python3.11/site-packages/:$PYTHONPATH
+export EB_PYTHON=python3.11
 
 # Install EasyBuild module in C2S2's directory
-eb --install-latest-eb-release --prefix $EB_DIR --modules-tool=EnvironmentModulesC --module-syntax=Tcl
+eb --install-latest-eb-release --prefix $EB_DIR --modules-tool=EnvironmentModules --module-syntax=Tcl
 ```
 
 **Note**: EasyBuild was installed using Anaconda's Python 3.8, sourced using `module load anaconda3`. If you are using a different version of Python, change the prompts accordingly. Here, we assume the tree:
